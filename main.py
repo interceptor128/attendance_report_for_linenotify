@@ -7,6 +7,9 @@ def main_proc():
     # 本文作成
     line_body = edit_line_body(get_aisatsu(get_time()))
 
+    # development commit 用コメント
+    line_notify_api = "api_url"
+
     # 動作確認用 本番時は消す
     print(line_body)
 
