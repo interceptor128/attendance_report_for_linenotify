@@ -5,7 +5,7 @@ import datetime
 
 def main_proc():
     # 本文作成
-    line_body = edit_line_body(get_aisatsu(get_time()))
+    line_body = edit_line_body(get_hello_text(get_time()))
 
     # development commit 用コメント
     line_notify_api = "api_url"
@@ -20,12 +20,12 @@ def get_time():
     return now.strftime("%H:%M:%S")
 
 
-def get_aisatsu(now_times):
+def get_hello_text(now_times):
     if now_times >= '09:00' and now_times <= "10:30":
-        aisatsu_body = "おはようございます。"
+        hello_text = "おはようございます。"
     else:
-        aisatsu_body = "お疲れ様です。"
-    return aisatsu_body
+        hello_text = "お疲れ様です。"
+    return hello_text
 
 
 def edit_line_body(aisatsu):
